@@ -2,7 +2,7 @@ import unittest
 from iterator_massive import MassiveIterator
 
 
-class TestStringMethods(unittest.TestCase):
+class TestMassiveIterator(unittest.TestCase):
     @unittest.expectedFailure
     def test_empty_massive(self):
         MassiveIterator([])
