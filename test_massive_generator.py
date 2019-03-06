@@ -2,7 +2,7 @@ import unittest
 from generator_massive import MassiveGenerator
 
 
-class TestStringMethods(unittest.TestCase):
+class TestMassiveGenerator(unittest.TestCase):
     @unittest.expectedFailure
     def test_empty_massive(self):
         MassiveGenerator([])
