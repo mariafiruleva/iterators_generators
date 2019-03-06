@@ -1,4 +1,18 @@
 class MassiveIterator:
+    """
+    Massive can be a list with 1, 2 or 3 values. There are 3 arguments: massive (stop), start, step.
+    By default, start = 0 and step = 1, but you can change it using more than one arguments.
+    Examples:
+    [i for i in MassiveIterator([3])] #stop is 3
+    >[0, 1, 2]
+    [i for i in MassiveIterator([1, 3])] #start is 1, stop is 3
+    >[1, 2]
+    [i for i in MassiveIterator([3, 7, 2])] #start is 3, stop is 7, step is 2
+    >[3, 5]
+    [i for i in MassiveIterator([*{3: 3}])] #stop is 3
+    >[0, 1, 2]
+    """
+
     def __init__(self, massive, start=0, step=1):
         if (len(massive) == 0) or (len(massive) > 3):
             raise TypeError("massive iterator expected 1, 2 or 3 arguments, got {}".format(len(massive)))
