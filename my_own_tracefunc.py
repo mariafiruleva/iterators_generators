@@ -8,6 +8,7 @@ def tracefunc(frame, event, arg):
     return tracefunc
 
 
+<<<<<<< HEAD
 def foo():
     friends = ["Bob", "Tom"]
     for f in friends:
@@ -21,3 +22,8 @@ def tracefoo(target_function):
 
 
 tracefoo(foo)
+=======
+def tracefoo(target_function):
+    sys.settrace(tracefunc)
+    target_function()
+>>>>>>> 491ae6cd0e35636c0e893625021e539aacbfcf6f
